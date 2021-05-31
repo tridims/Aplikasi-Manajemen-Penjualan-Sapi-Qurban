@@ -3,10 +3,11 @@ package com.dimas.ManajemenPenjualanSapiQurban;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ManagementApp {
+public class ManagementApp implements Serializable {
 
     private @Getter final List<Sapi> daftarSapi = new ArrayList<>();
     private @Getter final List<Pembeli> daftarPembeli = new ArrayList<>();

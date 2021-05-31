@@ -3,7 +3,9 @@ package com.dimas.ManajemenPenjualanSapiQurban;
 import lombok.Getter;
 import lombok.Setter;
 
-public class HewanQurban {
+import java.io.Serializable;
+
+public class HewanQurban implements Serializable {
     private @Getter @Setter int id;
     private @Getter @Setter Long hargaBeli;
     private @Getter @Setter String deskripsi;

@@ -3,7 +3,9 @@ package com.dimas.ManajemenPenjualanSapiQurban;
 import lombok.Getter;
 import lombok.Setter;
 
-public class Sapi extends HewanQurban {
+import java.io.Serializable;
+
+public class Sapi extends HewanQurban implements Serializable {
 
     private @Getter @Setter String jenisSapi;
 

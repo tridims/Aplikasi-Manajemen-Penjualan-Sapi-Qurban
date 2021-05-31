@@ -1,6 +1,7 @@
 package com.dimas.GUIApp;
 
 import com.dimas.ManajemenPenjualanSapiQurban.ManagementApp;
+import com.dimas.ManajemenPenjualanSapiQurban.ManagementAppExternalSaveFileManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,7 +12,8 @@ import java.io.IOException;
 
 public class MainApp extends Application {
 
-    public static ManagementApp ManajemenApp = new ManagementApp(150000L, 50000L, 150000L);
+    public static ManagementAppExternalSaveFileManager saveFileManager = new ManagementAppExternalSaveFileManager();
+    public static ManagementApp ManajemenApp = saveFileManager.initManagementAppObject();
 
     public static void main(String[] args) {
         launch(args);
@@ -25,5 +27,11 @@ public class MainApp extends Application {
         primaryStage.setTitle("Aplikasi Manajemen Penjualan Sapi Qurban");
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        saveFileManager.saveApp();
+        super.stop();
     }
 }

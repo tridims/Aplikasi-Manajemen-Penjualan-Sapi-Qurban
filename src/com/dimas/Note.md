@@ -16,6 +16,12 @@ CLI maupun GUI
 - [x] Membuat user dan produk sapi
 - [x] Menghapus user dan produk sapi
 - [x] Meminta daftar user dan produk sapi
+- [x] Meminta objek pembeli
 - [x] Fitur untuk search
-- [ ] Fitur menghitung atau menentukan harga jual
+- [x] Fitur menghitung atau menentukan harga jual
 - [ ]
+
+# todo list
+- [ ] Membuat format text untuk bagian harga lebih mudah dibaca
+- [ ] Membuat input tanggal menggunakan komponen date time di javafx
+- [x] Implementasi interface Serializable untuk menyimpan data

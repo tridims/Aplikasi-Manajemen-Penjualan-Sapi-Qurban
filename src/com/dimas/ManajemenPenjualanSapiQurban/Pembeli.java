@@ -3,10 +3,11 @@ package com.dimas.ManajemenPenjualanSapiQurban;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pembeli {
+public class Pembeli implements Serializable {
     private @Getter final int id;
     private @Getter @Setter String nama;
     private @Getter @Setter String alamat;
