@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dimas.GUIApp.ManajemenPembeli.ManajemenPembeli">
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f0f2f2;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="356.0" layoutY="40.0" prefHeight="68.0" prefWidth="292.0" text="DAFTAR PEMBELI">
+                    <font>
+                        <Font size="32.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="tabelDaftarPembeli" layoutX="30.0" layoutY="108.0" prefHeight="769.0" prefWidth="1136.0">
+                    <columns>
+                        <TableColumn fx:id="tableID" prefWidth="68.0" text="Id" />
+                        <TableColumn fx:id="tableNama" prefWidth="179.0" text="Nama" />
+                        <TableColumn fx:id="tableAlamat" prefWidth="199.0" text="Alamat" />
+                        <TableColumn fx:id="tableNomorHP" prefWidth="183.0" text="Nomor HP" />
+                        <TableColumn fx:id="tableJumlahSapiDijual" prefWidth="142.0" text="Jumlah Sapi Dibeli" />
+                        <TableColumn fx:id="tableCatatan" prefWidth="364.0" text="Catatan" />
+                    </columns>
+                </TableView>
+                <JFXButton fx:id="button_transaksi" defaultButton="true" layoutX="1185.0" layoutY="378.0" prefHeight="42.0" prefWidth="103.0" style="-fx-background-color: #e28743;" text="Transaksi" />
+                <JFXButton fx:id="button_lihat_detail" defaultButton="true" layoutX="1185.0" layoutY="483.0" prefHeight="42.0" prefWidth="103.0" style="-fx-background-color: #e28743;" text="Lihat Detail" />
+                <JFXButton fx:id="button_hapus" defaultButton="true" layoutX="1185.0" layoutY="535.0" prefHeight="42.0" prefWidth="103.0" style="-fx-background-color: #e28743;" text="Hapus" />
+                <JFXButton fx:id="button_edit_data" defaultButton="true" layoutX="1185.0" layoutY="430.0" prefHeight="42.0" prefWidth="103.0" style="-fx-background-color: #e28743;" text="Edit Data" />
+            <JFXButton fx:id="button_tambahPembeli" defaultButton="true" layoutX="1185.0" layoutY="325.0" prefHeight="42.0" prefWidth="103.0" style="-fx-background-color: #e28743;" text="Add" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

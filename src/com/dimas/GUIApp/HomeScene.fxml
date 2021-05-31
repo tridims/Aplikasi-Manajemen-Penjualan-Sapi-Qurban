@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dimas.GUIApp.HomeScene">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f0f2f2;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="65.0" layoutY="115.0" prefHeight="99.0" prefWidth="575.0" text="Statistik Penjualan" textAlignment="CENTER">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="234.0" prefHeight="39.0" prefWidth="181.0" text="Data Sapi">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="281.0" prefHeight="31.0" prefWidth="182.0" text="Jumlah Sapi">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="319.0" prefHeight="31.0" prefWidth="182.0" text="Jumlah belum terjual">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="358.0" prefHeight="31.0" prefWidth="182.0" text="Jumlah Terjual">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="393.0" prefHeight="31.0" prefWidth="182.0" text="Jumlah Terkirim">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text_jumlah_sapi" layoutX="283.0" layoutY="281.0" prefHeight="31.0" prefWidth="162.0" text="5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text_jumlah_sapi_belum_terjual" layoutX="283.0" layoutY="319.0" prefHeight="31.0" prefWidth="162.0" text="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text_jumlah_sapi_terjual" layoutX="283.0" layoutY="358.0" prefHeight="31.0" prefWidth="162.0" text="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text_jumlah_sapi_terkirim" layoutX="283.0" layoutY="393.0" prefHeight="31.0" prefWidth="162.0" text="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="492.0" prefHeight="39.0" prefWidth="224.0" text="Data Pembeli">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="539.0" prefHeight="31.0" prefWidth="162.0" text="Jumlah Pembeli">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="577.0" prefHeight="31.0" prefWidth="182.0" text="Jumlah Belum Lunas">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="616.0" prefHeight="31.0" prefWidth="182.0" text="Jumlah Lunas">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="651.0" prefHeight="31.0" prefWidth="182.0" text="Some random slot">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text_jumlah_pembeli" layoutX="285.0" layoutY="539.0" prefHeight="31.0" prefWidth="162.0" text="5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text_jumlah_pembeli_belum_lunas" layoutX="285.0" layoutY="577.0" prefHeight="31.0" prefWidth="162.0" text="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text_jumlah_pembeli_lunas" layoutX="285.0" layoutY="616.0" prefHeight="31.0" prefWidth="162.0" text="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="651.0" prefHeight="31.0" prefWidth="162.0" text="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="747.0" layoutY="88.0" prefHeight="713.0" prefWidth="595.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="140.0" prefHeight="31.0" prefWidth="231.0" text="Target Keuntungan (Persapi)">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="55.0" prefHeight="3.0" prefWidth="575.0" text="Pengaturan Aplikasi" textAlignment="CENTER">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="197.0" prefHeight="31.0" prefWidth="280.0" text="Biaya Perawatan (Persapi Perhari)">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="252.0" prefHeight="31.0" prefWidth="280.0" text="Biaya Pengiriman">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textField_target_keuntungan" editable="false" layoutX="294.0" layoutY="144.0" prefHeight="26.0" prefWidth="232.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="textField_biaya_Perawatan" editable="false" layoutX="294.0" layoutY="197.0" prefHeight="26.0" prefWidth="232.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="textField_biaya_pengiriman" editable="false" layoutX="294.0" layoutY="254.0" prefHeight="26.0" prefWidth="232.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton fx:id="button_change_setting" buttonType="RAISED" layoutX="33.0" layoutY="330.0" text="Change Setting" />
+                  <JFXButton fx:id="button_update" buttonType="RAISED" layoutX="177.0" layoutY="329.0" text="Update" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="187.0" layoutY="43.0" text="Selamat Datang Di Aplikasi Manajemen Penjualan Sapi Qurban">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="900.0" prefWidth="187.0" style="-fx-background-color: #006665;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="button_home" layoutX="14.0" layoutY="31.0" prefHeight="71.0" prefWidth="158.0" ripplerFill="BLACK" style="-fx-background-color: #acdbdb;" text="HOME" />
+            <JFXButton fx:id="button_manage_sapi" layoutX="14.0" layoutY="133.0" prefHeight="70.0" prefWidth="157.0" style="-fx-background-color: #acdbdb;" text="MANAJEMEN SAPI" />
+            <JFXButton fx:id="button_manage_pembeli" layoutX="15.0" layoutY="232.0" prefHeight="74.0" prefWidth="155.0" style="-fx-background-color: #acdbdb;" text="MANAJEMEN PEMBELI" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
