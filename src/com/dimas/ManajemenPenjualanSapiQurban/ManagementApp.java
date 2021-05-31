@@ -14,15 +14,15 @@ public class ManagementApp {
 
     // variable yang dapat diatur
     private @Getter @Setter Long targetKeuntunganPerSapi;
-    private @Getter @Setter Long biayaPerawatanPerhari;
+    private @Getter @Setter Long perkiraanBiayaPerawatan;
     private @Getter @Setter Long biayaPengiriman;
 
     private int countIdPembeli = 0;
     private int countIdSapi = 0;
 
-    public ManagementApp(Long targetKeuntunganPerSapi, Long biayaPerawatanPerhari, Long biayaPengiriman){
+    public ManagementApp(Long targetKeuntunganPerSapi, Long perkiraanBiayaPerawatan, Long biayaPengiriman){
         this.targetKeuntunganPerSapi = targetKeuntunganPerSapi;
-        this.biayaPerawatanPerhari = biayaPerawatanPerhari;
+        this.perkiraanBiayaPerawatan = perkiraanBiayaPerawatan;
         this.biayaPengiriman = biayaPengiriman;
 
         // Set default Object for Demonstration
@@ -95,20 +95,20 @@ public class ManagementApp {
     }
 
     public int getJumlahPembeliBelumLunas() {
-        return getPembeliBelumLunas().size();
+        return getDaftarPembeliBelumLunas().size();
     }
 
     public int getJumlahPembeliLunas() {
-        return getListPembeliLunas().size();
+        return getDaftarPembeliSudahLunas().size();
     }
 
-    public List<Pembeli> getPembeliBelumLunas() {
+    public List<Pembeli> getDaftarPembeliBelumLunas() {
         ArrayList<Pembeli> listPembeliBelumLunas = new ArrayList<>();
         daftarPembeli.stream().filter(pembeli -> !pembeli.isLunas()).forEach(listPembeliBelumLunas::add);
         return listPembeliBelumLunas;
     }
 
-    public List<Pembeli> getListPembeliLunas() {
+    public List<Pembeli> getDaftarPembeliSudahLunas() {
         ArrayList<Pembeli> listPembeliLunas = new ArrayList<>();
         daftarPembeli.stream().filter(Pembeli::isLunas).forEach(listPembeliLunas::add);
         return listPembeliLunas;
@@ -130,7 +130,6 @@ public class ManagementApp {
         }
 
         if (temp == null) {
-            System.out.println("Tidak ada sapi yang dimaksud!");
             return;
         }
 
@@ -142,7 +141,6 @@ public class ManagementApp {
             Pembeli pembeli = sapi.getPembeli();
             pembeli.getDaftarSapiDibeli().remove(sapi);
         }
-
         daftarSapi.remove(sapi);
     }
 
@@ -177,13 +175,11 @@ public class ManagementApp {
 
     public List<Sapi> getDaftarSapiBelumlaku() {
         List<Sapi> listSapiBelumLaku = new ArrayList<>();
-
         daftarSapi.stream().filter(sapi -> !sapi.isLaku()).forEach(listSapiBelumLaku::add);
-
-//        daftarSapi.forEach(sapi -> {
-//            if (!sapi.isLaku()) listSapiBelumLaku.add(sapi);
-//        });
-
         return listSapiBelumLaku;
+    }
+
+    public <T extends HewanQurban> Long hitungHargajual(T hewan) {
+        return hewan.getHargaBeli() + targetKeuntunganPerSapi + biayaPengiriman + perkiraanBiayaPerawatan;
     }
 }

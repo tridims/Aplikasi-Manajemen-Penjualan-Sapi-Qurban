@@ -87,13 +87,11 @@ public class ScenePilihSapi implements Initializable {
         kolomWarna.setCellValueFactory(new PropertyValueFactory<Sapi, String>("warna"));
         kolomHargaBeli.setCellValueFactory(new PropertyValueFactory<Sapi, String>("hargaBeli"));
         kolomkalkulasiHargaJual.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Sapi, String>, ObservableValue<String>>() {
+
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Sapi, String> sapiStringCellDataFeatures) {
-                return new SimpleStringProperty(String.valueOf(sapiStringCellDataFeatures.getValue().getHargaJualOptimal(
-                        MainApp.ManajemenApp.getTargetKeuntunganPerSapi(),
-                        MainApp.ManajemenApp.getBiayaPerawatanPerhari(),
-                        MainApp.ManajemenApp.getBiayaPerawatanPerhari()
-                )));
+                return new SimpleStringProperty(String.valueOf(MainApp.ManajemenApp.hitungHargajual(sapiStringCellDataFeatures.getValue())
+                ));
             }
         });
 

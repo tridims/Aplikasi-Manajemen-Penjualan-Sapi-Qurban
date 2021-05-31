@@ -125,11 +125,8 @@ public class ManajemenSapi implements Initializable {
         kolom_kalkulasi_harga.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Sapi, String>, ObservableValue<String>>() {
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Sapi, String> sapiStringCellDataFeatures) {
-                return new SimpleStringProperty(String.valueOf(sapiStringCellDataFeatures.getValue().getHargaJualOptimal(
-                        MainApp.ManajemenApp.getTargetKeuntunganPerSapi(),
-                        MainApp.ManajemenApp.getBiayaPerawatanPerhari(),
-                        MainApp.ManajemenApp.getBiayaPerawatanPerhari()
-                )));
+                return new SimpleStringProperty(String.valueOf(MainApp.ManajemenApp.hitungHargajual(sapiStringCellDataFeatures.getValue())
+                ));
             }
         });
         kolom_pembeli.setCellValueFactory(

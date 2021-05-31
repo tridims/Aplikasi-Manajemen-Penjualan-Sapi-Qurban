@@ -37,15 +37,9 @@ public class SceneShowDetailSapi implements Initializable{
     public void init(Sapi sapi, ManajemenSapi manajemenSapi) {
         this.manajemenSapi = manajemenSapi;
         this.sapi = sapi;
-
         textWarna.setText(sapi.getWarna());
         textHargaBeli.setText(String.valueOf(sapi.getHargaBeli()));
-        textKalkulasiHargaJual.setText(String.valueOf(sapi.getHargaJualOptimal(
-                MainApp.ManajemenApp.getTargetKeuntunganPerSapi(),
-                MainApp.ManajemenApp.getBiayaPerawatanPerhari(),
-                MainApp.ManajemenApp.getBiayaPengiriman()
-        )));
-
+        textKalkulasiHargaJual.setText(String.valueOf(MainApp.ManajemenApp.hitungHargajual(sapi)));
         textTanggalBeli.setText(sapi.getTanggalPembelian());
         textStatus.setText("");
         textHargaJual.setText((sapi.isLaku())?String.valueOf(sapi.getHargaJual()):"");

@@ -64,7 +64,7 @@ public class HomeScene implements Initializable {
         // App Setting section
         textField_target_keuntungan.setText(String.valueOf(MainApp.ManajemenApp.getTargetKeuntunganPerSapi()));
         textField_biaya_pengiriman.setText(String.valueOf(MainApp.ManajemenApp.getBiayaPengiriman()));
-        textField_biaya_Perawatan.setText(String.valueOf(MainApp.ManajemenApp.getBiayaPerawatanPerhari()));
+        textField_biaya_Perawatan.setText(String.valueOf(MainApp.ManajemenApp.getPerkiraanBiayaPerawatan()));
         button_update.setDisable(true);
 
         button_change_setting.setOnMouseClicked(mouseEvent -> {
@@ -90,7 +90,7 @@ public class HomeScene implements Initializable {
                 biayaPerawatan = Long.parseLong(textField_biaya_Perawatan.getText());
                 biayaPengiriman = Long.parseLong(textField_biaya_pengiriman.getText());
                 targetKeuntungan = Long.parseLong(textField_target_keuntungan.getText());
-                MainApp.ManajemenApp.setBiayaPerawatanPerhari(biayaPerawatan);
+                MainApp.ManajemenApp.setPerkiraanBiayaPerawatan(biayaPerawatan);
                 MainApp.ManajemenApp.setBiayaPengiriman(biayaPengiriman);
                 MainApp.ManajemenApp.setTargetKeuntunganPerSapi(targetKeuntungan);
                 button_update.setDisable(true);

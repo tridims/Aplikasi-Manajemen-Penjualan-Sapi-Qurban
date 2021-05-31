@@ -8,8 +8,6 @@ public class HewanQurban {
     private @Getter @Setter Long hargaBeli;
     private @Getter @Setter String deskripsi;
     private @Getter @Setter String warna;
-
-    // BELUM IMPLEMENTASI
     private @Getter @Setter String tanggalPembelian;
     private @Getter @Setter Long hargaJual;
     private @Getter @Setter Pembeli pembeli;
@@ -23,9 +21,5 @@ public class HewanQurban {
         this.deskripsi = deskripsi;
         this.warna = warna;
         this.tanggalPembelian = tanggalPembelian;
-    }
-
-    public Long getHargaJualOptimal(Long targetKeuntungan, Long biayaPerawatanTotal, Long biayaPengiriman){
-        return hargaBeli + targetKeuntungan + biayaPengiriman + biayaPerawatanTotal;
     }
 }

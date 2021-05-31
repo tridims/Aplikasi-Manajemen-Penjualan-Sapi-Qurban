@@ -23,13 +23,13 @@ public class Pembeli {
         this.keterangan = keterangan;
     }
 
-    public boolean beli(Sapi sapi, String keterangan, Long hargaLaku, String tanggalAntar) {
+    public boolean beli(Sapi sapi, String catatanPembeli, Long hargaLaku, String tanggalAntar) {
         if (sapi.isLaku()) return false;
 
         daftarSapiDibeli.add(sapi);
         sapi.setLaku(true);
         sapi.setPembeli(this);
-        sapi.setCatatanPembeli(keterangan);
+        sapi.setCatatanPembeli(catatanPembeli);
         sapi.setHargaJual(hargaLaku);
         sapi.setTanggalAntar(tanggalAntar);
         return true;
