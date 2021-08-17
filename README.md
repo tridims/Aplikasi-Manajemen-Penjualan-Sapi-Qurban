@@ -28,6 +28,7 @@ Aplikasi ini dibuat dengan bahasa Java. GUI dibuat dengan menggunakan JavaFx dan
     
 3. Melakukan kalkulasi sederhana harga jual sesuai pengaturan aplikasi
 4. Mencatat transaksi pembayaran yang dilakukan pembeli
+5. Mensave data
 
 ## Diagram UML Aplikasi
 
