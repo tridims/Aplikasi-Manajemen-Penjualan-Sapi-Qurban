@@ -24,4 +24,4 @@ CLI maupun GUI
 # todo list
 - [ ] Membuat format text untuk bagian harga lebih mudah dibaca
 - [ ] Membuat input tanggal menggunakan komponen date time di javafx
-- [ ] Implementasi interface Serializable untuk menyimpan data
+- [x] Implementasi interface Serializable untuk menyimpan data
