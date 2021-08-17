@@ -1,4 +1,4 @@
-# Aplikasi Manajemen Penjualan Sapi Qurban-Qu
+# Aplikasi Manajemen Penjualan Sapi Qurban
 
 ---
 
